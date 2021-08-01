@@ -2,7 +2,7 @@
 Simple online chat (TS, React, Firebase)
 
 ## Before start
-Add your firebase data to firebase.ts
+Add your firebase data to .env
 
 ## Available Scripts
 
