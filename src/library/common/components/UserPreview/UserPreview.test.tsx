@@ -1,9 +1,8 @@
 import React from 'react';
-import {render, screen} from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
-import {UserPreview} from "./UserPreview";
-import IUser from "../../../../modules/Chat/interfaces/IUser";
-import {Avatar} from "@material-ui/core";
+import { UserPreview } from './UserPreview';
+import IUser from '../../../../pages/Chat/interfaces/IUser';
 
 const user: IUser = {
 	uid: 'testUID',
@@ -12,7 +11,7 @@ const user: IUser = {
 };
 
 beforeEach(() => {
-	render(<UserPreview {...user} />)
+	render(<UserPreview user={user} />);
 });
 
 describe('UserPreview content', () => {
@@ -26,7 +25,7 @@ describe('UserPreview content', () => {
 
 	it('should have user avatar', () => {
 		user.avatar = 'https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png';
-		render(<UserPreview {...user} />)
+		render(<UserPreview user={user} />);
 		expect(screen.getByTestId('customAvatar')).toBeInTheDocument();
 	});
 });

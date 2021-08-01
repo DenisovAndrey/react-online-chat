@@ -1,10 +1,10 @@
 import React from 'react';
-import {queryByTestId, render, screen} from '@testing-library/react';
+import { queryByTestId, render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
-import {Message} from "./Message";
+import {IMessageProps, Message} from './Message';
 import IMessage from "../../interfaces/IMessage";
 
-const message = {
+const message: IMessage = {
 	user: {
 		uid: 'testUID',
 		avatar: null,
@@ -13,10 +13,10 @@ const message = {
 	text: 'testText',
 	createdAt: null,
 	uid: 'testUID',
-}
+};
 
 beforeEach(() => {
-	render(<Message {...message as unknown as IMessage} />)
+	render(<Message message={message} />);
 });
 
 describe('UserPreview content', () => {

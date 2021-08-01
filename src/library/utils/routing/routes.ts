@@ -1,13 +1,13 @@
 import { FC, ReactComponentElement } from 'react';
 import { Routes } from './RoutesEnum';
-import { Chat } from '../../../modules/Chat';
-import { Main } from '../../../containers/Mian';
-import { Friends } from '../../../modules/Friends';
-import { Topics } from '../../../modules/Topics';
+import { Chat } from '../../../pages/Chat';
+import { Main } from '../../../pages/Main';
+import { Friends } from '../../../pages/Friends';
+import { Topics } from '../../../pages/Topics';
 
 export interface IRout {
 	path: Routes;
-	Component: FC<any>
+	Component: FC<any>;
 }
 
 export const publicRoutes: IRout[] = [

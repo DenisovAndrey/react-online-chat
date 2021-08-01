@@ -4,6 +4,6 @@ import IUser from './IUser';
 export default interface IMessage {
 	uid: string;
 	text: string;
-	createdAt: FieldValue;
+	createdAt: FieldValue | null;
 	user: IUser;
 };
